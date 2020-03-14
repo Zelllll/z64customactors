@@ -1,5 +1,5 @@
-PROGRAM = platform
-OVLOUT = platform.zovl
+PROGRAM = checkabletextspot
+OVLOUT = checkabletextspot.zovl
 ADDRESS = 0x80800000
 PARTS = $(PROGRAM).o
 
