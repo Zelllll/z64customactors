@@ -1,7 +1,7 @@
 /**
  * platform.c
  *
- * A rising and falling tree pillar for the Hollow Root Keep.
+ * A rising and falling platform.
  *
  * by /zel/
  *
