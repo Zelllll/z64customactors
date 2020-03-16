@@ -6,15 +6,6 @@
  * By /zel/
  **/
 
-/** Actor variable format:
- * XXXX; X = Amount of units for the platform to raise (in hexadecimal)
- **/
-
-/* !!!! Credit me if you use this actor somewhere in your mod !!!! */
-/* !!!! To use this actor, make sure "obj.h" (this file) and "platform.c" are in the same folder, then inject the .c and .zobj with Nokaubure's Custom Actors Toolkit !!!! */
-/* !!!! Before using this actor, open Custom Actors Toolkit, and then select Help > Download Z64OVL Github !!!! */
-/* !!!! To change the ROM version, open platform.c, and change "<z64ovl/oot/debug.h>" to "<z64ovl/oot/u10.h>" if using Ocarina of Time 1.0, or "<z64ovl/mm/u10.h>" if using Majora's Mask 1.0. !!!! */
-
 // Actor information
 #define ACT_ID                  0x012C              /* Change this to the ID of the actor that you are replacing. */
 #define OBJ_ID                  0x011D              /* Change this to the ID of the object that you are replacing. */
