@@ -8,7 +8,7 @@ Z Rotation = YYYY; Y = Z Target Distance; Setting this to 0 gives a typical targ
 
 ### How to use:
 **Before using this actor, make sure to edit the values in obj.h to be correct!**
-To change the ROM version, open checkabletextspot.c, and change "<z64ovl/oot/debug.h>" to "<z64ovl/oot/u10.h>" if using Ocarina of Time 1.0, or "<z64ovl/mm/u10.h>" if using Majora's Mask 1.0. (OoT Debug is used by default).
+To change the ROM version, open checkabletextspot.c, and change `<z64ovl/oot/debug.h>` to `<z64ovl/oot/u10.h>` if using Ocarina of Time 1.0, or `<z64ovl/mm/u10.h>` if using Majora's Mask 1.0. (OoT Debug is used by default).
 
-To use this actor, make sure "obj.h" (this file) and "checkabletextspot.c" are in the same folder, then inject the .c with Nokaubure's Custom Actors Toolkit.
+To use this actor, make sure `obj.h` (this file) and "checkabletextspot.c" are in the same folder, then inject the .c with Nokaubure's Custom Actors Toolkit.
 Also, before compiling, make sure to select **Help > Download Z64OVL Github** in Custom Actors Toolkit.
