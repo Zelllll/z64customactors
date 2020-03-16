@@ -4,6 +4,8 @@
 This is a rising elevator platform; perfect for dungeon puzzles. The model, as well as other parameters can be easily changed in `obj.h` as well.
 The platform will also automatically lower if it is in a location that is inaccessible to the player. The amount which the platform should rise can also be configured with the actor variable.
 
+[Here is an example of using this actor.](https://www.youtube.com/watch?v=qW3mE1MZokk)
+
 ## Actor variable format:
 XXXX; X = Amount of units for the platform to raise (in hexadecimal)
 
