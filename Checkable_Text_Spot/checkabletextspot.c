@@ -38,7 +38,7 @@ const z64_actor_init_t init_vars =
 void Init(entity_t *this, z64_global_t *global)
 {
     this->actor.text_id = this->actor.variable;
-    this->actor.target_distance_index = this->actor.rot_2.z;
+    this->actor.target_dist_index = this->actor.rot.z;
 }
 
 void Destroy(entity_t *this, z64_global_t *global)
