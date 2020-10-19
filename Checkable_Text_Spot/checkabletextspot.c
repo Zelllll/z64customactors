@@ -6,7 +6,7 @@
  * by zel.
  **/
  
-#include <z64ovl/oot/debug.h> /* Change to this to oot/u10.h for OoT 1.0, or mm/u10.h for MM 1.0.
+#include <z64ovl/oot/debug.h> /* Change to this to oot/u10.h for OoT 1.0, or mm/u10.h for MM 1.0. */
 
 #define ACT_ID                  0x012C /* Change this to the ID of the actor that you are replacing. */
 #define OBJ_ID                  0x0001
