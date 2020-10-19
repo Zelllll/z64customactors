@@ -5,8 +5,6 @@ This is a completely custom Thwomp enemy! It's behavior closely mimicks its appe
 **Before using this actor, make sure to edit the values in obj.h to be correct!**
 To change the ROM version, open thwomp.c, and change `<z64ovl/oot/debug.h>` to `<z64ovl/oot/u10.h>` if using Ocarina of Time 1.0, or `<z64ovl/mm/u10.h>` if using Majora's Mask 1.0. (OoT Debug is used by default).
 
-[Here is an example of using this actor.](https://www.youtube.com/watch?v=qW3mE1MZokk) CHANGE THIS!!!!!!
-
 To use this actor, make sure `obj.h` (this file) and `thwomp.c` are in the same folder, then inject the .c with Nokaubure's Custom Actors Toolkit.
 Also, before compiling, make sure to select **Help > Download Z64OVL Github** in Custom Actors Toolkit.
 
