@@ -3,55 +3,52 @@
  *
  * A Z-targetable text box spot.
  *
- * by /zel/
+ * by zel.
  **/
  
-#include <z64ovl/oot/debug.h> 
-#include "obj.h"
+#include <z64ovl/oot/debug.h> /* Change to this to oot/u10.h for OoT 1.0, or mm/u10.h for MM 1.0.
 
-typedef struct
-{
-	z64_actor_t actor;
-} entity_t;
+#define ACT_ID                  0x012C /* Change this to the ID of the actor that you are replacing. */
+#define OBJ_ID                  0x0001
+#define FLAGS                   0x00000011
+#define ACT_TYPE                OVLTYPE_PROP
 
-#define OVL_TYPE                    OVLTYPE_PROP
+typedef struct {
+    z64_actor_t actor;
+} Actor;                    
 
-void Init(entity_t *this, z64_global_t *global);
-void Destroy(entity_t *this, z64_global_t *global);
-void Update(entity_t *this, z64_global_t *global);
-void Draw(entity_t *this, z64_global_t *global);
+void Init(Actor* this, z64_global_t* globalCtx);
+void Destroy(Actor* this, z64_global_t* globalCtx);
+void Update(Actor* this, z64_global_t* globalCtx);
 
-const z64_actor_init_t init_vars = 
-{
-	.number = ACT_ID, .padding = 0x0000,
-	.type = OVL_TYPE,
-	.room = 0x00,
-	.flags = 0x00000011,
-	.object = OBJ_ID,
-	.instance_size = sizeof(entity_t),
-	.init = Init,
-	.dest = Destroy,
-	.main = Update,
-	.draw = Draw
+z64_actor_init_t init_vars = {
+    ACT_ID,
+    ACT_TYPE,
+    0,
+    FLAGS,
+    OBJ_ID,
+    0,
+    sizeof(Actor),
+    Init,
+    Destroy,
+    Update,
+    NULL
 };
 
-void Init(entity_t *this, z64_global_t *global)
-{
+void Init(Actor* this, z64_global_t* globalCtx) {
+    // Set the message ID to the actor's params
     this->actor.text_id = this->actor.variable;
+    
+    // Set the Z target distance
     this->actor.target_dist_index = this->actor.rot.z;
 }
 
-void Destroy(entity_t *this, z64_global_t *global)
-{
-    
+void Destroy(Actor* this, z64_global_t* globalCtx) {
 }
 
-void Update(entity_t *this, z64_global_t *global)
-{
-    external_func_8002F2F4(&this->actor, global);
-}
-
-void Draw(entity_t *this, z64_global_t *global)
-{
-    
+void Update(Actor* this, z64_global_t *globalCtx) {
+    if (this->actor.xz_dist_from_link < 100.0f) {
+        // Enable speak command
+        external_func_8002F2F4(&this->actor, globalCtx);
+    }
 }
